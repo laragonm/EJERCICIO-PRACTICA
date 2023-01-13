@@ -1,14 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
-import ContactoListComponent from './components/container/contacto.list';
+import ContactoComponent from './components/pure/contacto.jsx';
 
 function App() {
+  const defaultContact = 
+  {
+    nombre: 'Luis',
+    apellido: 'Aragón',
+    email: 'luisaragmor@gmail.com',
+    conectado: false,
+  };
+  
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         {/** Componente de Listado de Contactos */}
-        <ContactoListComponent></ContactoListComponent>
+        <ContactoComponent contacto={ defaultContact }></ContactoComponent>
       </header>
     </div>
   );
